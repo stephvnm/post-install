@@ -8,6 +8,17 @@ echo
 sudo apt update && sudo apt upgrade -y
 
 echo
+echo "Building Awesome..."
+echo
+sudo apt build-dep awesome
+git clone https://github.com/awesomewm/awesome
+cd awesome
+make package
+cd build
+sudo apt install ./*.deb
+
+cd ~/Downloads
+echo
 echo "Installing Google chrome..."
 echo
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
