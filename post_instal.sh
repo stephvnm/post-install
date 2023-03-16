@@ -46,18 +46,18 @@ echo "Pulling network driver - https://github.com/Mange/rtl8192eu-linux-driver .
 echo
 git clone https://github.com/Mange/rtl8192eu-linux-driver
 
-# sudo apt-get install linux-headers-generic build-essential dkms
-# cd rtl8192eu-linux-driver/
-# cd include/
-# micro autoconf.h
-# sudo dkms add .
-# cd ../
-# sudo dkms add .
-# sudo dkms install rtl8192eu/1.0
-# echo "blacklist rtl8xxxu" | sudo tee /etc/modprobe.d/rtl8xxxu.conf
-# echo -e "8192eu\n\nloop" | sudo tee /etc/modules
-# echo "options 8192eu rtw_power_mgnt=0 rtw_enusbss=0" | sudo tee /etc/modprobe.d/8192eu.conf
-# sudo update-grub; sudo update-initramfs -u
+sudo apt-get install linux-headers-generic build-essential dkms
+cd rtl8192eu-linux-driver/
+cd include/
+micro autoconf.h
+sudo dkms add .
+cd ../
+sudo dkms add .
+sudo dkms install rtl8192eu/1.0
+echo "blacklist rtl8xxxu" | sudo tee /etc/modprobe.d/rtl8xxxu.conf
+echo -e "8192eu\n\nloop" | sudo tee /etc/modules
+echo "options 8192eu rtw_power_mgnt=0 rtw_enusbss=0" | sudo tee /etc/modprobe.d/8192eu.conf
+sudo update-grub; sudo update-initramfs -u
 
 echo
 echo "Installing picom..."
