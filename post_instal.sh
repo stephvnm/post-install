@@ -1,11 +1,17 @@
 #!/bin/bash
 
-cd ~/Downloads
-
 echo
 echo 'Updating system...'
 echo
 sudo apt update && sudo apt upgrade -y
+
+sudo apt install xorg xserver-xorg nvidia-detect xutils mesa-utils xinit -y
+
+sudo apt install -y build-essential
+
+xdg-user-dirs-update
+
+cd ~/Downloads
 
 echo
 echo "Building Awesome..."
@@ -27,9 +33,9 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 echo
 echo "Installing Alacritty..."
 echo
-sudo add-apt-repository ppa:aslatter/ppa -y
-sudo apt update 
-sudo apt install alacritty -y
+# sudo add-apt-repository ppa:aslatter/ppa -y
+# sudo apt update 
+# sudo apt install alacritty -y
 
 echo
 echo "Installing fonts..."
