@@ -11,31 +11,6 @@ sudo apt install -y build-essential
 
 xdg-user-dirs-update
 
-cd ~/Downloads
-
-echo
-echo "Building Awesome..."
-echo
-sudo apt build-dep awesome
-git clone https://github.com/awesomewm/awesome
-cd awesome
-make package
-cd build
-sudo apt install ./*.deb
-
-cd ~/Downloads
-echo
-echo "Installing Google chrome..."
-echo
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb 
-
-echo
-echo "Installing Alacritty..."
-echo
-# sudo add-apt-repository ppa:aslatter/ppa -y
-# sudo apt update 
-# sudo apt install alacritty -y
 
 echo
 echo "Installing fonts..."
